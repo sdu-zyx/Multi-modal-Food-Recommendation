@@ -1,0 +1,56 @@
+# general
+gpu_id: 0
+use_gpu: True
+seed: [998,999,1000,1001,1002]
+
+data_path: '/home/zyx2509/Food_dataset/'
+log_root: './log/'
+ckp_root: './ckp/'
+is_multimodal_model: True
+
+checkpoint_dir: 'saved'
+save_recommended_topk: True
+recommend_topk: 'recommend_topk/'
+
+embedding_size: 64
+weight_decay: 0.0
+req_training: True
+#embedding_size: 3780
+
+# training settings
+epochs: 100
+stopping_step: 5
+train_batch_size: 1024
+learning_rate_scheduler: [1.0, 50]
+eval_step: 5
+test_step: 5
+learner: adam
+learning_rate: 0.001
+
+# evaluation settings
+metrics: ["Recall", "NDCG", "Precision", "MAP"]
+topk: [5, 10, 20, 50]
+valid_metric: NDCG@20
+eval_batch_size: 256
+eval_by_user: True
+full_sort: False
+neg_sample_num: 500
+
+end2end: False
+SCHGN_ssl: False
+
+load_UserRecipe_graph: False
+load_RecipeRecipe_graph: False
+load_RecipeIngre_graph: False
+load_IngreIngre_graph: False
+load_RecipeCalories_graph: False
+load_RecipeHealth_graph: False
+use_cal_level: False
+use_health_level: False
+load_RecipeRecipeCo_graph: False
+load_RecipeRecipeIng_graph: False
+graph_inference_fast: False
+small_ingre: False
+
+# iteration parameters
+hyper_parameters: ["seed"]
