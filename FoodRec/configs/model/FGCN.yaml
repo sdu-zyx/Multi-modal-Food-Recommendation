@@ -1,0 +1,24 @@
+## grid search
+# learning_rate: [0.001, 0.005, 0.0001, 0.0005]
+# hyper_parameters: ["learning_rate"]
+
+## Foodcom
+learning_rate: 0.0005
+
+## Allrecipes
+#learning_rate: 0.001
+
+embedding_size: 64
+
+n_layers: 2
+layers: [64, 64, 64]
+reg_weight: 1e-04
+mess_dropout: 0.1
+aggregator_type: 'bi'
+epochs: 100
+eval_step: 5
+
+load_UserRecipe_graph: True
+load_RecipeIngre_graph: True
+load_IngreIngre_graph: True
+seed: [999]

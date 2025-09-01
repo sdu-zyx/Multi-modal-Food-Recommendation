@@ -1,0 +1,41 @@
+
+knn_k: 10
+mm_image_weight: 0.1
+n_mm_layers: 1
+n_ri_layers: 2                   # (int) The number of layers in LightGCN.
+loss_cl: 0.1
+#use_center_embedding: True
+
+# foodcom
+#n_ui_layers: 2
+#reg_weight: 0.01
+#learner: adam
+#learning_rate: 0.001
+#train_batch_size: 512
+#epochs: 100
+#eval_step: 10
+#n_cluster: 2000
+
+# allrecipe
+n_ui_layers: 1
+reg_weight: 0.01
+learner: adam
+learning_rate: 0.002
+learning_rate_scheduler: [0.5, 50]
+train_batch_size: 512
+epochs: 50
+eval_step: 5
+n_cluster: [2000]
+
+load_RecipeIngre_graph: True
+small_ingre: True
+graph_inference_fast: True
+load_TextCluster_graph: True
+load_ImageCluster_graph: True
+
+seed: [999]
+#flagD: [4]
+#edge: [10]
+### 0 no cl, 1 no ingre, 2 no image, 3 no text, 4 default
+hyper_parameters: ["n_cluster"]
+

@@ -1,0 +1,31 @@
+## grid search
+#embedding_size: 64              # (int) The embedding size of users and items.
+#n_layers: 2                     # (int) The number of layers in LightGCN.
+#reg_weight: [1e-01]               # (float) The L2 regularization weight.
+#
+#learner: adam
+#train_batch_size: 512
+#
+#learning_rate: [0.001, 0.005, 0.0001, 0.0005, 0.1, 0.01, 0.05]
+#epochs: 50
+#eval_step: 2
+#
+#hyper_parameters: ["reg_weight", "learning_rate"]
+
+# Foodcom & Allrecipes
+embedding_size: 64              # (int) The embedding size of users and items.
+n_layers: 2                     # (int) The number of layers in LightGCN.
+reg_weight: 1e-01               # (float) The L2 regularization weight.
+
+learner: adam
+train_batch_size: 512
+
+learning_rate: 0.001
+epochs: 100
+eval_step: 5
+
+seed: [999]
+flagD: [1]
+small_ingre: True
+## 0 image, 1 text, 2 ingre, 3 default
+hyper_parameters: ["flagD"]
