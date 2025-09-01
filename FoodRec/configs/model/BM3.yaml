@@ -1,0 +1,35 @@
+## grid search
+#embedding_size: 64
+#
+#n_layers: [1, 2]
+#dropout: [0.3, 0.5]
+#reg_weight: [0.1, 0.01]
+#cl_weight: 2.0
+#epochs: 50
+#eval_step: 2
+#
+#hyper_parameters: ["n_layers", "reg_weight", "dropout"]
+
+# Allrecipes
+
+
+## Foodcom
+embedding_size: 64
+
+n_layers: 1
+dropout: 0.3
+reg_weight: 0.1
+cl_weight: 2.0
+epochs: 100
+eval_step: 5
+seed: [999]
+
+# Allrecipes
+#embedding_size: 64
+#
+#n_layers: 2
+#dropout: 0.3
+#reg_weight: 0.1
+#cl_weight: 2.0
+#epochs: 100
+#eval_step: 5
